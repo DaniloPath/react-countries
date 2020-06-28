@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Countries from './components/countries/Countries';
+import Header from './components/header/Header';
 
 
 export default class App extends Component {
@@ -32,11 +33,12 @@ export default class App extends Component {
 
   render() {
     const { allCountries } = this.state
-    
+
     return (
       <div className='container'>
         <h1>React Countries</h1>
-
+        <Header />
+        
         <Countries countries={allCountries} />
       </div>
     ) 
