@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Countries from './components/countries/Countries';
 
 
 export default class App extends Component {
@@ -30,13 +31,13 @@ export default class App extends Component {
 
 
   render() {
-    const {allCountries} = this.state
-
-    console.log(allCountries)
-
+    const { allCountries } = this.state
+    
     return (
       <div className='container'>
         <h1>React Countries</h1>
+
+        <Countries countries={allCountries} />
       </div>
     ) 
   }
